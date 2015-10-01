@@ -1,6 +1,6 @@
-const _ = require('lodash-node');
-const webpack = require('webpack');
-const config = require('./webpack.config.dev');
+var _ = require('lodash-node');
+var webpack = require('webpack');
+var config = require('./webpack.config.dev');
 
 module.exports = _.assign({}, config, {
   devtool: 'source-map',

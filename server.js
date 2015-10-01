@@ -13,6 +13,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.use(express.static('public'));
+app.use('/api', require('./routes/api'));
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
