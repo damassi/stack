@@ -1,7 +1,8 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
+import chaiImmutable from 'chai-immutable';
 import Immutable, { List, Map } from 'immutable';
 
-// testing out chai-immutable
+chai.use(chaiImmutable);
 
 describe('Immutable', () => {
   describe('A List', () => {
@@ -70,7 +71,6 @@ describe('Immutable', () => {
       });
 
       const secondName = otherNames.set(2, Map({ name: 'hey!'}));
-      console.log(secondName.last())
 
       const more = List.of(Map({ name: 'foo' }), Map({ name: 'bar' }));
       expect(more.includes(Map({ name: 'foo' }))).to.equal(true);
