@@ -6,6 +6,7 @@ import Users from 'components/Users';
 
 const routes = (
   <Router component={AppLayout}>
+    <Route path="/" component={Login} />
     <Route path="login" component={Login} />
     <Route path="users" component={Users} />
   </Router>

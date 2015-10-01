@@ -10,11 +10,11 @@ module.exports = function (config) {
     reporters: ['progress', 'beep'],
 
     files: [
-      { pattern: 'karma-webpack-tests.js', watched: true }
+      { pattern: 'karma.webpack.tests.js', watched: true }
     ],
 
     preprocessors: {
-      'karma-webpack-tests.js': [
+      'karma.webpack.tests.js': [
         'webpack',
         'sourcemap'
       ]

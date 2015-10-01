@@ -8,7 +8,7 @@
     "build": "npm run clean && npm run build:webpack",
     "lint": "eslint src",
     "start": "node dev-server.js",
-    "test": "node karma-server.js"
+    "test": "node karma.server.js"
   },
   "repository": {
     "type": "git",

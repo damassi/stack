@@ -21,6 +21,8 @@ export default class Login extends Component {
     return (
       <div onClick={::this.handleClick}>
         Login {loggedIn.toString()}
+
+        <img src='assets/images/img.png' />
       </div>
     );
   }
