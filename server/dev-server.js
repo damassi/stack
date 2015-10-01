@@ -1,7 +1,7 @@
-const path = require('path');
-const express = require('express');
-const webpack = require('webpack');
-const config = require('./webpack.config.dev');
+import path from 'path';
+import express from 'express';
+import webpack from 'webpack';
+import config from '../webpack.config.dev';
 
 const app = express();
 const compiler = webpack(config);
@@ -13,13 +13,12 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.use(express.static('public'));
-app.use('/api', require('./routes/api'));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-app.listen(3333, 'localhost', function(err) {
+app.listen(3333, 'localhost', (err) => {
   if (err) {
     console.log(err);
     return;
