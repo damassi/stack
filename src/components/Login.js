@@ -2,10 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { login } from 'actions/appActions';
 
-@connect(state => ({
-  loggedIn: state.app.loggedIn,
-}))
-export default class Login extends Component {
+export class Login extends Component {
 
   static propTypes = {
     loggedIn: PropTypes.bool
@@ -27,3 +24,7 @@ export default class Login extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  loggedIn: state.app.loggedIn,
+}))(Login);

@@ -8,8 +8,8 @@
     "build": "npm run clean && npm run build:webpack",
     "clean": "rimraf dist",
     "lint": "eslint src",
-    "test": "node test/karma.server.js",
-    "test:watch": "node test/karma.server.js --watch"
+    "test": "node karma.server.js",
+    "test:watch": "node karma.server.js --watch"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.3.3",
     "phantomjs": "^1.9.18",
+    "react-addons-test-utils": "^0.14.0-rc1",
     "react-tools": "^0.13.3",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
