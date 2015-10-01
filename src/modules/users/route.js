@@ -1,8 +1,9 @@
 export default {
-  path: 'login',
+  path: 'users',
+
   getComponent(location, cb) {
     require.ensure([], (require) => {
-      cb(null, require('routes/login/containers/LoginContainer'));
+      cb(null, require('modules/users/components/UsersContainer'));
     });
   }
 };

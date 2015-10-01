@@ -2,7 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { login } from 'modules/login/actions/loginActions';
 
-export class Login extends Component {
+@connect(state => ({
+  loggedIn: state.login.loggedIn,
+}))
+export default class Login extends Component {
 
   static propTypes = {
     loggedIn: PropTypes.bool
@@ -17,14 +20,10 @@ export class Login extends Component {
 
     return (
       <div onClick={::this.handleClick}>
-        Login {loggedIn.toString()}
+        Login {loggedIn}
 
         <img src='assets/images/img.png' />
       </div>
     );
   }
 }
-
-export default connect(state => ({
-  loggedIn: state.app.loggedIn,
-}))(Login);

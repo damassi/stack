@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { getUsers } from 'actions/appActions';
+import { getUsers } from 'modules/users/actions/userActions';
 
 export class Users extends Component {
 

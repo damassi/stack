@@ -1,16 +1,26 @@
-import { createStore } from 'redux';
+import { combineReducers, compose, createStore } from 'redux';
 import { camelCase } from 'lodash-node';
-import rootReducer from 'reducers/index';
+
+import appReducer from 'modules/app/reducers';
+import loginReducer from 'modules/login/reducers';
+import usersReducer from 'modules/users/reducers';
+
 
 export function configureStore(initialState) {
-  const store = createStore(rootReducer, initialState);
+  const reducers = combineReducers(
+    appReducer,
+    // loginReducer(),
+    // usersReducer()
+  );
 
-  if (module.hot) {
-    module.hot.accept('reducers', () => {
-      const nextRootReducer = require('reducers/index');
-      store.replaceReducer(nextRootReducer);
-    });
-  }
+  const store = createStore(reducers, initialState);
+
+  // if (module.hot) {
+  //   module.hot.accept('reducers', () => {
+  //     const nextRootReducer = require('reducers/index');
+  //     store.replaceReducer(nextRootReducer);
+  //   });
+  // }
 
   return store;
 }

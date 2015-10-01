@@ -7,10 +7,10 @@ const rootRoute = {
   component: 'div',
   childRoutes: [{
     path: '/',
-    component: require('components/App'),
+    component: require('App'),
     childRoutes: [
-      require('routes/login'),
-      require('routes/users')
+      require('modules/login/route'),
+      require('modules/users/route')
     ]
   }]
 };
