@@ -1,16 +1,12 @@
-var path = require('path');
-var webpack = require('webpack');
+const _ = require('lodash-node');
+const webpack = require('webpack');
+const config = require('./webpack.config.dev');
 
-module.exports = {
+module.exports = _.assign({}, config, {
   devtool: 'source-map',
   entry: [
     './src/index'
   ],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
-  },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
@@ -24,11 +20,4 @@ module.exports = {
       }
     })
   ],
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'src')
-    }]
-  }
-};
+});
