@@ -1,14 +1,20 @@
 import { reducer } from 'utils/redux';
 
 const initialState = {
-  loading: true
+  loggedIn: false,
 };
 
 const actionsMap = {
 
-  loading(state, action) {
+  login(state) {
     return {
-      loading: action.payload.loading
+      loggedIn: !state.loggedIn
+    };
+  },
+
+  logout() {
+    return {
+      loggedIn: false
     };
   }
 

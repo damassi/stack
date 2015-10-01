@@ -1,13 +1,10 @@
 import * as types from 'constants/appActionTypes';
 
-export function login() {
+export function loading(isLoading) {
   return {
-    type: types.LOGIN
-  };
-}
-
-export function getUsers() {
-  return {
-    type: types.GET_USERS
+    type: types.LOADING,
+    payload: {
+      loading: isLoading
+    }
   };
 }
