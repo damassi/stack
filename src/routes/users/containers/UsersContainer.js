@@ -26,5 +26,5 @@ export class Users extends Component {
 }
 
 export default connect(state => ({
-  loading: state.app.loading,
+  loading: state.app.loading
 }))(Users);

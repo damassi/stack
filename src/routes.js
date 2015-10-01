@@ -1,14 +1,14 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
-import AppLayout from 'components/AppLayout';
-import Login from 'components/Login';
-import Users from 'components/Users';
+import AppContainer from 'routes/AppContainer';
+import LoginContainer from 'routes/login/LoginContainer';
+import UsersContainer from 'routes/users/UsersContainer';
 
 const routes = (
-  <Router component={AppLayout}>
-    <Route path="/" component={Login} />
-    <Route path="login" component={Login} />
-    <Route path="users" component={Users} />
+  <Router component={AppContainer}>
+    <Route path="/" component={LoginContainer} />
+    <Route path="login" component={LoginContainer} />
+    <Route path="users" component={UsersContainer} />
   </Router>
 );
 

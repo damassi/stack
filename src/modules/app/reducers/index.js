@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import appReducer from 'reducers/appReducer';
+import appReducer from 'modules/app/reducers/appReducer';
 
 export default combineReducers({
   app: appReducer
