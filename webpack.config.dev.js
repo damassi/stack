@@ -12,6 +12,15 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+    root: [
+      path.resolve('./src'),
+    ],
+    modulesDirectories: [
+      'node_modules'
+    ]
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

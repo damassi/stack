@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "immutable": "^3.7.5",
+    "lodash-node": "^3.10.1",
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
     "react-redux": "^3.0.1",
