@@ -9,11 +9,24 @@ server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
 
-server.get('/echo/:name', (req, res, next) => {
-  res.send(req.params);
+server.listen(8080, () => {
+  console.log('%s listening at %s', server.name, server.url);
+});
+
+server.get('/users', (req, res, next) => {
+  res.send([
+    {
+      user: 'Chris'
+    },
+    {
+      user: 'Katy'
+    }
+  ]);
+
   return next();
 });
 
-server.listen(8080, () => {
-  console.log('%s listening at %s', server.name, server.url);
+server.get('/echo/:name', (req, res, next) => {
+  res.send(req.params);
+  return next();
 });

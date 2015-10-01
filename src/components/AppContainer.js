@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class AppLayout extends Component {
+export default class AppContainer extends Component {
   render() {
     return (
       <div>

@@ -4,9 +4,11 @@ var config = require('./webpack.config.dev');
 
 module.exports = _.assign({}, config, {
   devtool: 'source-map',
+
   entry: [
     './src/index'
   ],
+
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { Login } from 'components/Login';
+import { Users } from 'components/Users';
 import { createShallowRenderer } from 'utils/testHelpers';
 
 describe('Login', () => {
@@ -8,14 +8,18 @@ describe('Login', () => {
 
   beforeEach(() => {
     shallowRenderer.render(
-      <Login
-        loggedIn={false}
+      <Users
+        users={[
+          'foo',
+          'bar',
+          'baz'
+        ]}
       />
     );
   });
 
   it('should render', () => {
-    const login = shallowRenderer.getRenderOutput();
-    expect(login).to.exist;
+    const users = shallowRenderer.getRenderOutput();
+    expect(users).to.exist;
   });
 });
