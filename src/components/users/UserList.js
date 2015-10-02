@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import User from 'components/users/User';
 
 export class UserList extends Component {
 
@@ -12,11 +13,12 @@ export class UserList extends Component {
 
     return (
       <ul>
-        { users.map((user, index) => {
+        { users && users.map((user, index) => {
           return (
-            <li key={`user-${index}`}>
-              {user}
-            </li>
+            <User
+              {...user}
+              key={`user-${index}`}
+            />
           );
         })}
       </ul>
@@ -25,5 +27,5 @@ export class UserList extends Component {
 }
 
 export default connect(state => ({
-  users: state.app.users
+  users: state.users.users
 }))(UserList);

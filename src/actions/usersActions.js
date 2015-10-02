@@ -1,3 +1,4 @@
+import http from 'axios';
 import * as types from 'constants/usersActionTypes';
 
 export function add() {
@@ -13,8 +14,15 @@ export function get() {
 }
 
 export function getAll() {
-  return {
-    type: types.GET_ALL
+  return (dispatch) => {
+    http.get('/api/users').then(response => {
+      dispatch({
+        type: types.GET_ALL,
+        payload: {
+          users: response.data
+        }
+      });
+    });
   };
 }
 

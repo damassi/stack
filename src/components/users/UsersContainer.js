@@ -1,15 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { getUsers } from 'actions/appActions';
+import * as userActions from 'actions/usersActions';
+import UserList from 'components/users/UserList';
 
-export class Users extends Component {
+@connect(state => ({
+  loading: false
+}))
+export default class UsersContainer extends Component {
 
   static propTypes = {
-    users: PropTypes.array.isRequired
+    loading: PropTypes.bool.isRequired
   }
 
   componentDidMount() {
-    this.props.dispatch(getUsers());
+    this.props.dispatch(userActions.getAll());
   }
 
   render() {
@@ -18,13 +22,9 @@ export class Users extends Component {
     return (
       <div>
         { loading
-          ? <Preloader />
+          ? <div />
           : <UserList /> }
       </div>
     );
   }
 }
-
-export default connect(state => ({
-  loading: state.app.loading,
-}))(Users);

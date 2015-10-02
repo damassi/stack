@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import Nav from 'components/shared/Nav';
 
 export default class AppContainer extends Component {
   render() {
     return (
       <div>
-        {this.props.children}
+        <nav>
+          <Nav />
+        </nav>
+        <main>
+          {this.props.children}
+        </main>
       </div>
     );
   }

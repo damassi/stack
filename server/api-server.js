@@ -16,10 +16,10 @@ server.listen(8080, () => {
 server.get('/users', (req, res, next) => {
   res.send([
     {
-      user: 'Chris'
+      name: 'Chris'
     },
     {
-      user: 'Katy'
+      name: 'Katy'
     }
   ]);
 
