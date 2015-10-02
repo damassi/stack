@@ -70,6 +70,7 @@
   "dependencies": {
     "axios": "^0.7.0",
     "bunyan": "^1.5.1",
+    "history": "^1.11.1",
     "immutable": "^3.7.5",
     "lodash-node": "^3.10.1",
     "react": "^0.14.0-rc1",
