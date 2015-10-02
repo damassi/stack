@@ -5,12 +5,14 @@ const server = restify.createServer({
   version: '0.1.0'
 });
 
+const PORT = 8080;
+
 server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
 
-server.listen(8080, () => {
-  console.log('%s listening at %s', server.name, server.url);
+server.listen(PORT, () => {
+  console.log(`${server.name} listening at ${server.url}`);
 });
 
 server.get('/users', (req, res, next) => {
