@@ -1,15 +1,16 @@
+import Immutable, { Map } from 'immutable';
 import { reducer } from 'utils/redux';
 
-const initialState = {
+const initialState = Immutable.fromJS({
   loading: true
-};
+});
 
 const actionsMap = {
 
   loading(state, action) {
-    return {
-      loading: action.payload.loading
-    };
+    return Map({
+      loading: action.payload.get('loading')
+    });
   }
 
 };

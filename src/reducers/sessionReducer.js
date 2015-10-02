@@ -1,21 +1,22 @@
+import Immutable, { Map } from 'immutable';
 import { reducer } from 'utils/redux';
 
-const initialState = {
+const initialState = Immutable.fromJS({
   loggedIn: false,
-};
+});
 
 const actionsMap = {
 
   login(state) {
-    return {
-      loggedIn: !state.loggedIn
-    };
+    return Map({
+      loggedIn: !state.get('loggedIn')
+    });
   },
 
   logout() {
-    return {
+    return Map({
       loggedIn: false
-    };
+    });
   }
 
 };

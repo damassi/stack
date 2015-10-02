@@ -28,9 +28,6 @@ export function reducer(actionsMap, initialState) {
       return state;
     }
 
-    return {
-      ...state,
-      ...reduceFn(state, action)
-    };
+    return state.mergeDeep(reduceFn(state, action));
   };
 }

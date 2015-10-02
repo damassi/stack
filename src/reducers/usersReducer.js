@@ -1,34 +1,36 @@
+import Immutable, { Map } from 'immutable';
 import { reducer } from 'utils/redux';
 
-const initialState = {
+const initialState = Immutable.fromJS({
   users: [],
   user: {}
-};
+});
 
 const actionsMap = {
 
   add(state, action) {
-    return {
-      users: action.payload.users
-    };
+    return Map({
+      users: action.payload.users,
+      foo: 'bar'
+    });
   },
 
   get(state, action) {
-    return {
+    return Map({
       user: action.payload.user
-    };
+    });
   },
 
   getAll(state, action) {
-    return {
+    return Map({
       users: action.payload.users
-    };
+    });
   },
 
   remove(state, action) {
-    return {
+    return Map({
       users: action.payload.users
-    };
+    });
   }
 
 };

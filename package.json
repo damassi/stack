@@ -64,6 +64,7 @@
     "lodash-node": "^3.10.1",
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
+    "react-immutable-proptypes": "^1.2.2",
     "react-redux": "^3.0.1",
     "react-router": "^1.0.0-rc1",
     "redux": "^3.0.2",

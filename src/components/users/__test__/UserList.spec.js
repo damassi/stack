@@ -1,4 +1,5 @@
 import React from 'react';
+import Immutable, { Map, List } from 'immutable';
 import { expect } from 'chai';
 import { UserList } from 'components/users/UserList';
 import { createShallowRenderer } from 'utils/testHelpers';
@@ -9,11 +10,14 @@ describe('Login', () => {
   beforeEach(() => {
     shallowRenderer.render(
       <UserList
-        users={[
-          'foo',
-          'bar',
-          'baz'
-        ]}
+        users={Immutable.fromJS([
+          {
+            name: 'chris',
+          },
+          {
+            name: 'katy'
+          }
+        ])}
       />
     );
   });

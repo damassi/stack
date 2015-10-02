@@ -17,7 +17,7 @@ export class Login extends Component {
 
     return (
       <div onClick={::this.handleClick}>
-        Login {loggedIn.toString()}
+        Logged In: {loggedIn.toString()}
 
         <img src='assets/images/img.png' />
       </div>
@@ -26,5 +26,5 @@ export class Login extends Component {
 }
 
 export default connect(state => ({
-  loggedIn: state.session.loggedIn,
+  loggedIn: state.session.get('loggedIn'),
 }))(Login);

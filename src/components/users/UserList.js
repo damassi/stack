@@ -1,11 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import User from 'components/users/User';
 
 export class UserList extends Component {
 
   static propTypes = {
-    users: PropTypes.array.isRequired
+    users: ImmutablePropTypes.list.isRequired
   }
 
   render() {
@@ -16,7 +17,7 @@ export class UserList extends Component {
         { users && users.map((user, index) => {
           return (
             <User
-              {...user}
+              name={user.get('name')}
               key={`user-${index}`}
             />
           );
@@ -27,5 +28,5 @@ export class UserList extends Component {
 }
 
 export default connect(state => ({
-  users: state.users.users
+  users: state.users.get('users')
 }))(UserList);

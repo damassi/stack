@@ -1,3 +1,4 @@
+import Immutable from 'immutable';
 import http from 'axios';
 import * as types from 'constants/usersActionTypes';
 
@@ -19,7 +20,7 @@ export function getAll() {
       dispatch({
         type: types.GET_ALL,
         payload: {
-          users: response.data
+          users: Immutable.fromJS(response.data)
         }
       });
     });
