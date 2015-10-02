@@ -6,10 +6,12 @@ import LoginContainer from 'components/login/LoginContainer';
 import UsersContainer from 'components/users/UsersContainer';
 
 const routes = (
-  <Router component={AppContainer} history={createHashHistory()}>
-    <Route path="/" component={LoginContainer} />
-    <Route path="login" component={LoginContainer} />
-    <Route path="users" component={UsersContainer} />
+  <Router history={createHashHistory()}>
+    <Route component={AppContainer}>
+      <Route path="/" component={LoginContainer} />
+      <Route path="login" component={LoginContainer} />
+      <Route path="users" component={UsersContainer} />
+    </Route>
   </Router>
 );
 

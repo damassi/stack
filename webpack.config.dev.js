@@ -1,6 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
-var WebpackNotifierPlugin = require('webpack-notifier');
+const path = require('path');
+const webpack = require('webpack');
+const WebpackNotifierPlugin = require('webpack-notifier');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoPrefixer = require('autoprefixer');
 
 module.exports = {
   devtool: 'eval',
@@ -29,7 +31,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new WebpackNotifierPlugin()
+    new WebpackNotifierPlugin(),
+    new ExtractTextPlugin('style.css', { allChunks: true }),
   ],
 
   module: {
@@ -56,7 +59,19 @@ module.exports = {
             }
           }
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass!postcss-loader')
+      },
+      {
+        test: /\.svg$/,
+        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       }
-    ]
+    ],
+
+    postcss: [
+      autoPrefixer
+    ],
   }
 };

@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Nav from 'components/shared/Nav';
+import styles from 'components/AppContainer.scss';
 
 export default class AppContainer extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <nav>
           <Nav />
         </nav>
-        <main>
+        <div>
           {this.props.children}
-        </main>
+        </div>
       </div>
     );
   }
