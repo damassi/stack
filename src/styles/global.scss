@@ -1,6 +1,9 @@
-$large: 12px;
-
-.fonts {
-  font-size: $large;
+body {
   font-family: 'helvetica';
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 20px;
+  padding: 10px;
 }

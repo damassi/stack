@@ -18,7 +18,7 @@ export class Login extends Component {
     return (
       <div>
         <h3>
-          Users
+          Log In
         </h3>
 
         <button onClick={::this.handleClick}>

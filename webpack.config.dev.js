@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoPrefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   devtool: 'eval',
@@ -71,7 +71,7 @@ module.exports = {
     ],
 
     postcss: [
-      autoPrefixer
+      autoprefixer
     ],
   }
 };
