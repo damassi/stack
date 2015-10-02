@@ -1,5 +1,5 @@
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-addons-test-utils'
 
 export function createShallowRenderer() {
-  return TestUtils.createRenderer();
+  return TestUtils.createRenderer()
 }

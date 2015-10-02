@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = function (config) {
 
@@ -52,5 +52,5 @@ module.exports = function (config) {
     webpackServer: {
       noInfo: true
     }
-  });
-};
+  })
+}

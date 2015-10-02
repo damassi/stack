@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Nav from 'components/shared/Nav';
-import styles from 'components/AppContainer.scss';
+import React, { Component } from 'react'
+import Nav from 'components/shared/Nav'
+import styles from 'components/AppContainer.scss'
 
 export default class AppContainer extends Component {
   render() {
@@ -13,6 +13,6 @@ export default class AppContainer extends Component {
           {this.props.children}
         </div>
       </div>
-    );
+    )
   }
 }

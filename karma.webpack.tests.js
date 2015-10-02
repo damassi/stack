@@ -1,8 +1,8 @@
-import 'babel/polyfill';
-import chai from 'chai';
-import chaiImmutable from 'chai-immutable';
+import 'babel/polyfill'
+import chai from 'chai'
+import chaiImmutable from 'chai-immutable'
 
-chai.use(chaiImmutable);
+chai.use(chaiImmutable)
 
-const context = require.context('./src/', true, /\.spec\.(js|jsx)$/);
-context.keys().forEach(context);
+const context = require.context('./src/', true, /\.spec\.(js|jsx)$/)
+context.keys().forEach(context)

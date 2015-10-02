@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import * as sessionActions from 'actions/sessionActions';
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import * as sessionActions from 'actions/sessionActions'
 
 export class Login extends Component {
 
@@ -9,11 +9,11 @@ export class Login extends Component {
   }
 
   handleClick() {
-    this.props.dispatch(sessionActions.login());
+    this.props.dispatch(sessionActions.login())
   }
 
   render() {
-    const { loggedIn } = this.props;
+    const { loggedIn } = this.props
 
     return (
       <div>
@@ -25,10 +25,10 @@ export class Login extends Component {
           Logged In: {loggedIn.toString()}
         </button>
       </div>
-    );
+    )
   }
 }
 
 export default connect(state => ({
   loggedIn: state.session.get('loggedIn'),
-}))(Login);
+}))(Login)

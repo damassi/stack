@@ -1,5 +1,5 @@
-import { Map } from 'immutable';
-import * as types from 'constants/appActionTypes';
+import { Map } from 'immutable'
+import * as types from 'constants/appActionTypes'
 
 export function loading(isLoading) {
   return {
@@ -7,5 +7,5 @@ export function loading(isLoading) {
     payload: Map({
       loading: isLoading
     })
-  };
+  }
 }

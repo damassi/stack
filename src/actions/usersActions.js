@@ -1,17 +1,17 @@
-import Immutable from 'immutable';
-import http from 'axios';
-import * as types from 'constants/usersActionTypes';
+import Immutable from 'immutable'
+import http from 'axios'
+import * as types from 'constants/usersActionTypes'
 
 export function add() {
   return {
     type: types.ADD
-  };
+  }
 }
 
 export function get() {
   return {
     type: types.GET
-  };
+  }
 }
 
 export function getAll() {
@@ -22,13 +22,13 @@ export function getAll() {
         payload: {
           users: Immutable.fromJS(response.data)
         }
-      });
-    });
-  };
+      })
+    })
+  }
 }
 
 export function remove() {
   return {
     type: types.REMOVE,
-  };
+  }
 }

@@ -1,7 +1,7 @@
-const _ = require('lodash-node');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const config = require('./webpack.config.dev');
+const _ = require('lodash-node')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const config = require('./webpack.config.dev')
 
 module.exports = _.assign({}, config, {
   devtool: 'source-map',
@@ -24,4 +24,4 @@ module.exports = _.assign({}, config, {
     }),
     new ExtractTextPlugin('style.css', { allChunks: true }),
   ],
-});
+})
