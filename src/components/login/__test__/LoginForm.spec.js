@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { Login } from 'components/Login';
+import { LoginForm } from 'components/login/LoginForm';
 import { createShallowRenderer } from 'utils/testHelpers';
 
 describe('Login', () => {
@@ -8,14 +8,14 @@ describe('Login', () => {
 
   beforeEach(() => {
     shallowRenderer.render(
-      <Login
+      <LoginForm
         loggedIn={false}
       />
     );
   });
 
   it('should render', () => {
-    const login = shallowRenderer.getRenderOutput();
-    expect(login).to.exist;
+    const loginForm = shallowRenderer.getRenderOutput();
+    expect(loginForm).to.exist;
   });
 });

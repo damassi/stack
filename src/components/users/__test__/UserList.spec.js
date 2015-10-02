@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { Users } from 'components/Users';
+import { UserList } from 'components/users/UserList';
 import { createShallowRenderer } from 'utils/testHelpers';
 
 describe('Login', () => {
@@ -8,7 +8,7 @@ describe('Login', () => {
 
   beforeEach(() => {
     shallowRenderer.render(
-      <Users
+      <UserList
         users={[
           'foo',
           'bar',
