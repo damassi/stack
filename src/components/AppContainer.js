@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from 'components/shared/Nav';
+import 'styles/normalize.scss';
 import styles from 'components/AppContainer.scss';
 
 export default class AppContainer extends Component {

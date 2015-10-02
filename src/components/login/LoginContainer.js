@@ -16,10 +16,14 @@ export class Login extends Component {
     const { loggedIn } = this.props;
 
     return (
-      <div onClick={::this.handleClick}>
-        Logged In: {loggedIn.toString()}
+      <div>
+        <h3>
+          Users
+        </h3>
 
-        <img src='assets/images/img.png' />
+        <button onClick={::this.handleClick}>
+          Logged In: {loggedIn.toString()}
+        </button>
       </div>
     );
   }

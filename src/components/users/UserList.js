@@ -13,16 +13,21 @@ export class UserList extends Component {
     const { users } = this.props;
 
     return (
-      <ul>
-        { users && users.map((user, index) => {
-          return (
-            <User
-              name={user.get('name')}
-              key={`user-${index}`}
-            />
-          );
-        })}
-      </ul>
+      <div>
+        <h3>
+          Users
+        </h3>
+        <ul>
+          { users && users.map((user, index) => {
+            return (
+              <User
+                name={user.get('name')}
+                key={`user-${index}`}
+              />
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }

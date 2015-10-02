@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import styles from 'components/shared/Nav.scss';
 
 export default class Nav extends Component {
   render() {
     return (
-      <ul>
+      <ul className={styles.nav}>
         <li>
           <Link to='/login'>Login</Link>
         </li>
