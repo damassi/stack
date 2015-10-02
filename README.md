@@ -1,6 +1,6 @@
 # stack
 
-[React](https://facebook.github.io/react/), [React Router](https://github.com/rackt/react-router), [Redux](https://github.com/rackt/redux), [Immutable.js](https://facebook.github.io/immutable-js/), [CSS Modules](https://github.com/css-modules/css-modules), [React CSS Modules](https://github.com/gajus/react-css-modules), [Karma](http://karma-runner.github.io/0.13/index.html) and [Mocha](https://mochajs.org/).
+[React](https://facebook.github.io/react/), [React Router](https://github.com/rackt/react-router), [Redux](https://github.com/rackt/redux), [Immutable.js](https://facebook.github.io/immutable-js/), [CSS Modules](https://github.com/css-modules/css-modules), [Karma](http://karma-runner.github.io/0.13/index.html) and [Mocha](https://mochajs.org/).
 
 ## Installation
 ```
