@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 import { connect } from 'react-redux'
-import ReactCSS from 'react-css-modules'
 import User from 'components/users/User'
 import styles from 'components/users/UserList.scss'
 
@@ -19,7 +18,7 @@ export class UserList extends Component {
         <h3>
           Users
         </h3>
-        <ul className='user-list'>
+        <ul className={styles.userList}>
           { users && users.map((user, index) => {
             return (
               <User
@@ -36,4 +35,4 @@ export class UserList extends Component {
 
 export default connect(state => ({
   users: state.users.get('users')
-}))(ReactCSS(UserList, styles))
+}))(UserList)

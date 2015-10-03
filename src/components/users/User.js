@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import styles from 'components/users/User.scss';
+import React, { Component, PropTypes } from 'react'
+import styles from 'components/users/User.scss'
 
 export default class User extends Component {
 
@@ -8,7 +8,7 @@ export default class User extends Component {
   }
 
   render() {
-    const { name } = this.props;
+    const { name } = this.props
 
     return (
       <li className={styles.user}>

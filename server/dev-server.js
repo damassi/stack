@@ -31,5 +31,5 @@ app.listen(PORT, 'localhost', (err) => {
     return
   }
 
-  console.log(`Dev server listening at http://localhost:${PORT}`)
+  console.log(`dev-server listening at http://localhost:${PORT}`)
 })

@@ -1,15 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import * as sessionActions from 'actions/sessionActions'
+import LoginForm from 'components/login/LoginForm'
 
-export class Login extends Component {
+@connect(state => ({
+  loggedIn: state.session.get('loggedIn')
+}))
+export default class LoginContainer extends Component {
 
   static propTypes = {
-    loggedIn: PropTypes.bool
-  }
-
-  handleClick() {
-    this.props.dispatch(sessionActions.login())
+    loggedIn: PropTypes.bool.isRequired
   }
 
   render() {
@@ -18,17 +17,11 @@ export class Login extends Component {
     return (
       <div>
         <h3>
-          Log In
+          Logged In: {loggedIn.toString()}
         </h3>
 
-        <button onClick={::this.handleClick}>
-          Logged In: {loggedIn.toString()}
-        </button>
+        <LoginForm />
       </div>
     )
   }
 }
-
-export default connect(state => ({
-  loggedIn: state.session.get('loggedIn'),
-}))(Login)

@@ -7,9 +7,9 @@ const initialState = Immutable.fromJS({
 
 const actionsMap = {
 
-  login(state) {
+  login() {
     return Map({
-      loggedIn: !state.get('loggedIn')
+      loggedIn: true
     })
   },
 

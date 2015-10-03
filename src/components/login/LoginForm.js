@@ -1,7 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
 import * as sessionActions from 'actions/sessionActions'
 
 export class LoginForm extends Component {
+
+  static propTypes = {
+    loggedIn: PropTypes.bool.isRequired
+  }
 
   handleLoginClick() {
     this.props.dispatch(sessionActions.login())
@@ -24,3 +29,7 @@ export class LoginForm extends Component {
     )
   }
 }
+
+export default connect(state => ({
+  loggedIn: state.session.get('loggedIn'),
+}))(LoginForm)

@@ -1,11 +1,11 @@
-import React from 'react';
-import Immutable, { Map, List } from 'immutable';
-import { expect } from 'chai';
-import { UserList } from 'components/users/UserList';
-import { createShallowRenderer } from 'utils/testHelpers';
+import React from 'react'
+import Immutable, { Map, List } from 'immutable'
+import { expect } from 'chai'
+import { UserList } from 'components/users/UserList'
+import { createShallowRenderer } from 'utils/testHelpers'
 
 describe('Login', () => {
-  const shallowRenderer = createShallowRenderer();
+  const shallowRenderer = createShallowRenderer()
 
   beforeEach(() => {
     shallowRenderer.render(
@@ -19,11 +19,11 @@ describe('Login', () => {
           }
         ])}
       />
-    );
-  });
+    )
+  })
 
   it('should render', () => {
-    const users = shallowRenderer.getRenderOutput();
-    expect(users).to.exist;
-  });
-});
+    const users = shallowRenderer.getRenderOutput()
+    expect(users).to.exist
+  })
+})
