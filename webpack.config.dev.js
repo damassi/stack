@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const WebpackNotifierPlugin = require('webpack-notifier')
+const NyanProgressPlugin = require('nyan-progress-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 
@@ -31,8 +32,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new WebpackNotifierPlugin(),
     new ExtractTextPlugin('style.css', { allChunks: true }),
+    new NyanProgressPlugin(),
+    new WebpackNotifierPlugin()
   ],
 
   module: {
