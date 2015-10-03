@@ -10,10 +10,11 @@ export function configureStore(initialState) {
     transformer: immutableToObject
   })
 
-  const createStoreWithMiddleware = applyMiddleware(
-    thunk,
-    logger
-  )(createStore)
+  const middleware = process.env.NODE_ENV !== 'production'
+    ? [thunk, logger]
+    : [thunk]
+
+  const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore)
 
   const store = createStoreWithMiddleware(rootReducer, initialState)
 
