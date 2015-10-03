@@ -8,11 +8,9 @@ const store = configureStore()
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <Provider store={store}>
-          {routes}
-        </Provider>
-      </div>
+      <Provider store={store}>
+        {routes}
+      </Provider>
     )
   }
 }
