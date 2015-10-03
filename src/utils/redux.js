@@ -1,11 +1,18 @@
 import { applyMiddleware, createStore } from 'redux'
-import thunkMiddleware from 'redux-thunk'
+import thunk from 'redux-thunk'
+import createLogger from 'redux-logger'
 import { camelCase } from 'lodash-node'
+import immutableToObject from 'utils/immutableToObject'
 import rootReducer from 'reducers/index'
 
 export function configureStore(initialState) {
+  const logger = createLogger({
+    transformer: immutableToObject
+  })
+
   const createStoreWithMiddleware = applyMiddleware(
-    thunkMiddleware
+    thunk,
+    logger
   )(createStore)
 
   const store = createStoreWithMiddleware(rootReducer, initialState)
