@@ -5,7 +5,7 @@ const server = restify.createServer({
   version: '0.1.0'
 })
 
-const PORT = 8080
+export const PORT = 8080
 
 server.use(restify.acceptParser(server.acceptable))
 server.use(restify.queryParser())

@@ -3,6 +3,7 @@ import path from 'path'
 import proxy from 'proxy-middleware'
 import webpack from 'webpack'
 import config from '../webpack.config.dev'
+import { PORT as API_PORT } from './api-server'
 
 const app = express()
 const compiler = webpack(config)
@@ -19,7 +20,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }))
 
 app.use(express.static('public'))
-app.use('/api', proxy('http://localhost:8080'))
+app.use('/api', proxy(`http://localhost:${API_PORT}`))
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../public', 'index.html'))
