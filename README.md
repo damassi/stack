@@ -1,8 +1,8 @@
+![dependencies](https://david-dm.org/damassi/stack.svg)
+
 # stack
 
 [React](https://facebook.github.io/react/), [React Router](https://github.com/rackt/react-router), [Redux](https://github.com/rackt/redux), [Immutable.js](https://facebook.github.io/immutable-js/), [CSS Modules](https://github.com/css-modules/css-modules), [Karma](http://karma-runner.github.io/0.13/index.html), [Mocha](https://mochajs.org/) and [Restify](https://github.com/restify/node-restify) as an API layer.
-
-![dependencies](https://david-dm.org/damassi/stack.svg)
 
 ## Installation
 ```
