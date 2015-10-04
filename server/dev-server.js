@@ -22,7 +22,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(express.static('public'))
 app.use('/api', proxy(`http://localhost:${API_PORT}`))
 
-app.get('*', function(req, res) {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public', 'index.html'))
 })
 
