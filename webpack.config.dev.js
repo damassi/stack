@@ -33,8 +33,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('style.css', { allChunks: true }),
-    new NyanProgressPlugin(),
-    new WebpackNotifierPlugin()
+    new WebpackNotifierPlugin(),
+    new NyanProgressPlugin({
+      debounceInterval: 50,
+      nyanCatSays: progress => progress === 1 && 'Complete!'
+    }),
   ],
 
   module: {

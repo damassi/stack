@@ -1,5 +1,5 @@
-require('babel/register');
+require('babel/register')
 
 // Boot
-require('./server/dev-server');
-require('./server/api-server');
+require('./server/dev-server')
+require('./server/api-server')
